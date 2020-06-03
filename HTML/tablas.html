@@ -1,0 +1,60 @@
+<html>
+
+<head></head>
+
+<body>
+
+    <!--Para escribir tablas en HTML usamos la etiqueta table y le definimos los parametros de la siguiente manera-->
+    <!--Los parametros principales son: Ancho, cellspacing indica el espacio entre las celdas de la tabla, cellpadding el espacio que se deja alrededor del texto dentro de una celda-->
+    
+    <table width="100%" border="1" bordercolor="#0000FF" cellspacing="10" cellpadding="10">
+
+
+    <!--Encabezado a una pagina con la etiqueta caption-->
+
+    <caption align="bottom">Encabezado (Título de la tabla)
+
+    <!--FILAS, las filas se escriben usando la etiqueta tr-->
+
+    <!--FILA #1-->
+    <tr>
+
+        <!--Las celdas que van dentro de cada fila se escriben con la etiqueta td-->
+        <!--Las celdas que se creen con la etiqueta th se consideran como de encabezado y se crearán con nefrilla y centrado por defecto.-->
+
+        <th>Encabezado de la Tabla #1</th>
+        <th>ENcabezado de la Tabla #2</th>
+        <th>ENcabezado de la Tabla #3</th>
+
+
+    </tr>
+
+    <!--FILA #2-->
+
+    <tr>
+
+        <!--Ahora usaremos el tipo de celda con la etiqueta td-->
+
+        <td align="center">Texto 1</td>
+        <td align="right">Texto 2</td>
+        <td align="left">Texto 3</td>
+        <td rowspan="2">Hola</td>
+
+    </tr>
+
+    <!--FILA #3-->
+
+    <tr>
+        <!--Para agrupar celdas se usa el parametro colspan-->
+        <td colspan="2" valing="middle" align="center"> Este texto agrupa dos celdas</td>
+        <td align="center">descripcion 1</td>
+    
+    </tr>
+
+    </table>
+
+</caption>
+
+</body>
+
+</html>
