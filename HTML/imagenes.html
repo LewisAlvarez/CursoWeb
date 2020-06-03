@@ -1,0 +1,33 @@
+<html>
+    <head></head>
+
+    <body>
+
+        <!--IMAGENES-->
+        <h1>Imagenes y Mapa de imagenes</h1>
+
+        <!--Para adjuntar imagenes en html usamos el tag img y configuramos los diferentes parámetros (este tag no es necesario cerrarlo=-->
+        
+        <!--EL parametro src es la ruta donde esta ubicada la imagen, alig para alinearla en el fondo, alt para poner una descripcion, height y width para la altura y anchura de la imagen-->
+        
+        <!--El atributo usemap se usa en la imagen que quiero que lleve el área y me redirija a otro lugar o cargue otra información-->
+        <img src="images/chelsea.jpg" border=1 alt="Imagen del escudo Chelsea" width="350" height="300" usemap="#players">
+
+        <!--Respnsive<: Anchura máxima de una imagen-->
+        <img src="images/city.png" style="max-width:100%;width:auto;height:auto;">
+
+        <!--<h2>Mapa de imagenes</h2>-->
+        <!--Ahora se creará un mapa de imagenes usando el atributa map de html-->
+        <!--Para este ejemplo sólo funciona al presionar en el equipo chelsea, la idea es que la imagen sirva de hipervinculo y redirija a otra pagina-->
+
+        <map name="players" >
+
+            <!--En el atributo href se escribe el destino del área cuando se presione en el shape de tipo circulo y se encuentre en las coordenadas especificadas-->
+            <area alt="AL presionar aquí iras a un panel con los jugadores" shape="circle" coords="148,154,120"  href="./jugadores.html">
+
+        </map>
+
+
+    </body>
+
+</html>
