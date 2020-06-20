@@ -1,0 +1,62 @@
+<html>
+    <head></head>
+    <body>
+        <h1>Formularios</h1>
+
+        <form action="mailto:lewis040@hotmail.es" method="POST" enctype="text/plain">
+        
+        <!--Etiquetas para entradas de texto -->
+
+        <br> Nombre <input type="text" name="nNombre" value="">
+        <br> Apellido <input type="text" name="nApellido" value="">
+        <br> Correo <input type="text" name="nCorreo" value="@">
+
+        <!--Etiquetas para entradas de texto para una contraseña -->
+        <br> Contraseña <input type="password" name="contrasenha">
+
+        <!--Etiquetas para entradas de texto extensas -->
+
+        <br> <textarea name="opiniones" rows="15" cols="50"> Escribe aquí tu opinión sobre la temática ...</textarea>
+
+        
+        <!--Para una lista desplegable para seleccionar diferentes opciones-->
+        <!--Tambien podemos hacer que se puedan seleccionar varias opciones al presional shift y seleccionandolas, esto se hace agregando la linea "multiple" como si fuera un parametro-->
+        <!--El parametro value es muy importante ya que el receptor de la información del formulario recibirá los datos en el formato "S.O=1" si seleccionan windows-->
+        <br> Selecciona el sistema operativo con el que estas trabajando: 
+        <select name="S.O">
+            <option value="1">Windows</option>
+            <option value="2">Linux</option>
+            <option value="3">Mac OS</option>
+        </select>
+        
+        <!--Listas de botones, rabio button-->
+        <br> Selecciona tu lenguaje de programacion favorito
+        <br>
+        <input type="radio" name="Lenguaje de programacion" value="1"> C++
+        <br>
+        <input type="radio" name="Lenguaje de programacion" value="2"> Python
+        <br>
+        <input type="radio" name="Lenguaje de programacion" value="3"> Java
+        <br>
+        <!--Listas de botones, checkbox-->
+        <br> Selecciona el editor de texto que más te guste
+        <br>
+        <input type="checkbox" name="Editor de texto" value="1"> Notepad++
+        <br>
+        <input type="checkbox" name="Editor de texto" value="2" checked> Visual studio code
+        <br>
+        <input type="checkbox" name="Editor de texto" value="3"> Sublime text
+
+        <!--BOTON PARA ENVIAR LA INFORMACIÓN, tipo submit-->
+        <br>
+        <input type="submit" value="Enviar informacion">
+
+        <!--BOTON PARA REINICIAR EL FORMULARIO, tipo s reset-->
+        <input type="reset" value="Borrar informacion">
+
+        
+        </form>
+
+
+    </body>
+</html>
