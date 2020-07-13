@@ -10,21 +10,20 @@
         <!--Para definir nuestras reglas CSS-->
         <!-- A todas las eqituetas footer apliquele la siguiente regla -->
         <!-- Para afectar por ID (Elemento único) y no por el tipo de etiqueta usamos # antes del id -->
+        <!-- Para aplicar estilos dependiendo el parametro, en estre caso cite de citas se pone entre corchetes [cites] -->
         <style>
 
-          #cabecera {
-            background: red;
-            color: seashell;
-          }
-
-          #articuloUno {
-            background: grey;
-            color: indigo;
+          .green {
+            background: greenyellow;
           }
 
           footer {
             background: hotpink;
             color: ivory;
+          }
+
+          blockquote[cite] {
+            background: indigo;
           }
 
         </style>
@@ -33,13 +32,13 @@
 
 
     <body>
-
-      <header id="cabecera">
+<!--El atributo class es como un identificador (ID) que puede ser utilizado en otras etiquetas-->
+      <header class="green">
         <h1>Mi primer Blog</h1>
       </header>
 
       <!-- nav etiqueta para indicar que lo que esté dentro es para navegar-->
-      <nav id="navegacion">
+      <nav>
         <ul>
             <li>Principal</li>
             <li>Ayuda</li>
@@ -51,14 +50,14 @@
 
       <section>
           <!--Etiqueta article sirve para detallar contenido dentro se puede repetir en varias ocaciones-->
-          <article id="articuloUno">
+          <article>
               <!--Para definir la jerarquía de los títulos h1-->
-              <hgroup>
+              <hgroup class="green">
                 <h1>El primer articulo</h1>
                 <h2>Texto de prueba articulo</h2>
               </hgroup>
               <time datetime="13:03:2020">Publicad o el 13:07:2020</time>
-              <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Deleniti minus quisquam, ullam dolor ratione eius, itaque beatae nesciunt maxime consectetur hic facere ipsa explicabo dicta magni nulla sint consequatur, vero dolores temporibus qui aspernatur rerum non. Natus, nam? Voluptate, quis.</p>
+              <p class="green">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Deleniti minus quisquam, ullam dolor ratione eius, itaque beatae nesciunt maxime consectetur hic facere ipsa explicabo dicta magni nulla sint consequatur, vero dolores temporibus qui aspernatur rerum non. Natus, nam? Voluptate, quis.</p>
               <footer>
                   Comentarios (0)
               </footer>
@@ -81,12 +80,12 @@
       <!--La etiqueta aside se usa cuando el contenido es relacionado con el de section , pero no tan importante -->
       <aside> <!--Para contenido lateral-->
         <!--Para hacer citas o referencias -->
-        <blockquote cite="http://">
+        <blockquote cite="http://youtube.com">
             Mensaje 1
-        </blockquote cite="http://">
-            Mensaje 2
-        <blockquote>
-
+        </blockquote >
+            
+        <blockquote cite="http://facebook.com">
+          Mensaje 2
         </blockquote>
       </aside>
 
