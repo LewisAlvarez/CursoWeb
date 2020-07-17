@@ -1,0 +1,34 @@
+/* Reglas para afectar todos los titulos en html de tipo h1*/
+h1 {
+    /* En esta regla afectaremos el tamaño de todos los titulos h1*/
+    font-size: 35px;
+    font-family: cursive;
+}
+
+h2 {
+    /* En esta regla afectaremos el tamaño de todos los subtitulos h2*/
+    font-size: 22px;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+}
+
+/* Para aplicar reglas a direrentes instancias debemos separar por "," y escribimos la regla*/
+
+header, nav, section, article, aside, footer{
+    /* A continuación, se pondrá un borde en cada una de las instantes citadas con la instrucción "border"*/
+    border: 1px solid yellow;
+    display: block;
+}
+
+/* Para afectar todo el cuerpo de nuestra pagina*/
+
+body {
+    /* Aliniamento de textos*/
+    text-align: center;
+}
+
+/* Afectamos la division que se puso en el html dentro del body "div" */
+
+.agrupar {
+    /*Asignamos un fondo*/
+    background: silver;
+}

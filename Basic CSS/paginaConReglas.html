@@ -1,0 +1,89 @@
+<html lang="es">
+
+    <head>
+        <meta charset="uft-8">
+        <title>Pagina de inicio HTML</title>
+        <meta name="description" content="Este es mi primer sitio web utilizando  reglas CSS">
+        <meta name="author" content="Blackcalle">
+        <meta name="keywords" content="Palabra clave, mi primer pagina, pagina web usando css">
+
+
+        <!--De esta manetra realizamos la importación del codigo escrito en reglasCss.css-->
+        <link rel="stylesheet" href="reglasCss.css">
+
+
+    </head>
+
+
+    <body>
+
+        <!--Para realizar divisiones que no se vean reflejadas diractamente afectadas en la visualización de html usamos "div"-->
+        <div class="agrupar">
+<!--El atributo class es como un identificador (ID) que puede ser utilizado en otras etiquetas-->
+      <header>
+        <h1>Mi primer Blog</h1>
+      </header>
+
+      <!-- nav etiqueta para indicar que lo que esté dentro es para navegar-->
+      <nav>
+        <ul>
+            <li>Principal</li>
+            <li>Ayuda</li>
+            <li>Sobre nosotros</li>
+        </ul>
+      </nav>
+
+      <!--Etiqueta section sirve para poner nuestro contenido principal a dentro-->
+
+      <section>
+          <!--Etiqueta article sirve para detallar contenido dentro se puede repetir en varias ocaciones-->
+          <article>
+              <!--Para definir la jerarquía de los títulos h1-->
+              <hgroup>
+                <h1>El primer articulo</h1>
+                <h2>Texto de prueba articulo</h2>
+              </hgroup>
+              <time datetime="13:03:2020">Publicad o el 13:07:2020</time>
+              <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Deleniti minus quisquam, ullam dolor ratione eius, itaque beatae nesciunt maxime consectetur hic facere ipsa explicabo dicta magni nulla sint consequatur, vero dolores temporibus qui aspernatur rerum non. Natus, nam? Voluptate, quis.</p>
+              <footer>
+                  Comentarios (0)
+              </footer>
+              <a href="http://google.com"> Ir a google</a>
+          </article>
+          <article>
+              <hgroup>
+                <h1>El segundo articulo</h1>
+                <h2>Texto de prueba articulo</h2>
+              </hgroup>
+              <time datetime="13:03:2020">Publicado el 13:07:2020</time>
+              <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Excepturi aperiam recusandae nemo doloremque repellendus ipsa vel ut? Ab nisi ad officiis exercitationem nostrum adipisci, illum id mollitia autem eos est magni voluptate excepturi voluptatem incidunt blanditiis, culpa consequuntur, repellendus velit?e</p>
+              <img src="./images/logoRedondo.png">
+              <footer>
+                Comentarios (0)
+            </footer>
+            </article>
+      </section>
+
+      <!--La etiqueta aside se usa cuando el contenido es relacionado con el de section , pero no tan importante -->
+      <aside> <!--Para contenido lateral-->
+        <!--Para hacer citas o referencias -->
+        <blockquote cite="http://youtube.com">
+            Mensaje 1
+        </blockquote >
+            
+        <blockquote cite="http://facebook.com">
+          Mensaje 2
+        </blockquote>
+      </aside>
+
+      <!--Para el pie de pagina usamos la siguiente -->
+      <footer>
+          Derechos de autor reservados 2020
+      </footer>
+
+    </div>
+
+    </body>
+
+
+</html>
