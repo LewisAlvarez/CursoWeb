@@ -9,13 +9,14 @@ h2 {
     /* En esta regla afectaremos el tamaño de todos los subtitulos h2*/
     font-size: 22px;
     font-family: Georgia, 'Times New Roman', Times, serif;
+    background: #1808E3;
 }
 
 /* Para aplicar reglas a direrentes instancias debemos separar por "," y escribimos la regla*/
 
-header, nav, section, article, aside, footer{
+nav, section, article, aside, footer{
     /* A continuación, se pondrá un borde en cada una de las instantes citadas con la instrucción "border"*/
-    border: 1px solid yellow;
+    border: 1px solid black;
     display: block;
 }
 
@@ -24,11 +25,67 @@ header, nav, section, article, aside, footer{
 body {
     /* Aliniamento de textos*/
     text-align: center;
+    /*border: 1px solid black;*/
 }
 
 /* Afectamos la division que se puso en el html dentro del body "div" */
 
 .agrupar {
     /*Asignamos un fondo*/
-    background: silver;
+    /*background: silver;*/
+    margin-top: 50px;
+    margin-left: auto;
+    margin-right: auto;
+    width: 900px;
+    border: 1px solid black;
+    /*padding: 100px;*/
+}
+
+/* Realizaremos afectaciones ahora a la cabecera de la pagina web */
+.header {
+    background: #D803E2;
+    border-bottom: coral;
+    text-align: left;
+    margin: 5px;
+    padding: 1px;
+}
+
+/* Realizaremos afectaciones ahora en el menú, nav */
+.menu {
+    background: #73FF23;
+    text-align: left;
+}
+
+/* Para estilizar todos los elementos li dentro de ul dentro de nav*/
+.menu li {
+    list-style: none;
+    padding: 5px;
+    font: bold 15px verdana;
+    /*Para hacer que los contenidos en bloque se muestren de forma lineal pero sigan siendo bloques*/
+    display: inline-block;
+}
+
+/*APlicaremos reglas a el bloque section el cual tiene la lista de articulos*/
+.section {
+    padding: 15px;
+    border: 1px solid black;
+    width: 600px;
+    float: left;
+    background: pink;
+}
+
+/*APlicaremos reglas al bloque aside y lo pndremos al laso derecho de la pagina o de los articulos*/
+.aside {
+    background: darkgray;
+    width: 200px;
+    float: left;
+    padding: 10px;
+    background: pink;
+    margin: 20px;
+}
+
+
+/*Reglas al pie de pagina*/
+.pie {
+clear: both;
 }
