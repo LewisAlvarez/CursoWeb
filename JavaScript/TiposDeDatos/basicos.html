@@ -6,6 +6,13 @@
 
 <body>
     <h1>Fundamentos de Javascriptt :) tutoruial</h1>
+
+    <ul>
+        <li>Primavera</li>
+        <li>Otoño</li>
+        <li>Verano</li>
+        <li>Invierno</li>
+    </ul>
 <!--Dentro de la etiqueta script va codigo js-->
     <script>
 
@@ -72,8 +79,101 @@
         console.log(objeto)
         console.log(colores)
 
-        
+        //TIPOS DE DATOS
+        //Cadenas de texto
+        let name = "John"
+        let lastName = 'Smith'
+        let address = new String("Calle 20 # 44-56")
 
+        console.log("***** TIPOS DE DATO ***********")
+        console.log(name, lastName, address)
+
+        //Mostar todo el texto en mayuscula
+        console.log(name.toUpperCase())
+
+        //Buscar si en una cadena de texto se incluye una palabra
+        let parrafo = "Fragmento de un escrito con unidad temática, que queda diferenciado del resto de fragmentos por un punto y aparte y generalmente también por llevar letra mayúscula inicial y un espacio en blanco en el margen izquierdo de alineación del texto principal de la primera línea."
+
+        console.log(parrafo.includes("lewis"))
+        console.log(parrafo.includes("escrito"))
+        console.log(parrafo.split(" ")) //separador espacio
+
+        //Concatenar strings
+
+        let parteUno = "Hola"
+        let parteDos = ", Que tal?"
+
+        let saludo = parteUno + parteDos + " todo bien?"
+
+        console.log(saludo)
+
+        //Interpolar variables
+        //Template Strings
+        let saludo2 = `${parteUno} ${parteDos} como va todo?`
+        console.log(saludo2)
+
+        //Para html dinamico
+
+        let ul2 = `
+    <ul>
+        <li>Primavera</li>
+        <li>Otoño</li>
+        <li>Verano</li>
+        <li>Invierno</li>
+    </ul>
+        `
+
+        console.log(ul2)
+
+
+        //NUMEROS, NUMBERS
+        console.log("******* NUMBERS *******")
+
+        let a = 2
+        let b = new Number(15.9)
+        let c = -8.95678
+
+        console.log(a, b)
+
+        //Para redondear
+        console.log(c.toFixed(1))
+        console.log(c.toFixed(3))
+
+        //Convertir a number una cadena, parse int
+
+        let age = "30"
+        let peso = '85.47'
+
+        let aNumero = parseInt(age)
+        let aNumero2 = parseFloat(peso)
+
+        console.log(aNumero)
+        console.log(aNumero2)
+
+        //Para saber el tipo de dato de tuna variable usamos el typeof
+        console.log(typeof age, typeof aNumero2)
+        console.log(age + peso)
+        console.log(age + aNumero2)
+        console.log(aNumero + aNumero2)
+
+        //BOOLEANOS
+        let verdadero = true
+        let falso = false
+
+        if (!falso){
+            console.log(verdadero, typeof falso)
+        }
+
+        //Undefined, Null NaN
+        let indefinida
+        let nulo = null
+
+        console.log(indefinida)
+        console.log(nulo)
+
+        //NaN --> Not a Number
+        let noEsUnNumero = "hola" * 20
+        console.log(noEsUnNumero)
 
     </script>
 
