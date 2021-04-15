@@ -16,6 +16,7 @@
 <!--Dentro de la etiqueta script va codigo js-->
     <script>
 
+/*
         var hola = "Hola mundo mundoo"
         let hello = "Hello World"
         console.log(hola)
@@ -26,7 +27,7 @@
             console.log("Ingresando a un condicional")
         }
 
-        //-------- Uso de variables con VAR
+        //-------- Uso de variables con VAR ----------------------------
         console.log("***************Declaracion de variables VAR************")
         var musica = "Salsa"
         console.log("Variable musica antes del bloque:", musica)
@@ -50,7 +51,7 @@
 
         console.log("Variable musica antes del bloque:", musica2)
 
-        //-- Constantes
+        //----------------------- CONSTANTES ---------------------------------
         const pi = 3.1415
         //const numero; --> No se pueden declarar constantes vacias
         console.log(pi)
@@ -174,6 +175,94 @@
         //NaN --> Not a Number
         let noEsUnNumero = "hola" * 20
         console.log(noEsUnNumero)
+
+        */
+
+        //-------------------------------- FUNCIONES ---------------------------------------------
+        //---------------------------------------------------------------------------------------------------
+        //Funcion declarada
+        
+        /*
+
+        function miFuncion(){
+            console.log("Uno")
+            console.log("Dos")
+            console.log("Tres")
+        }
+
+        function suma(){
+            let a = 5
+            let b = 6
+
+            return a+b
+        }
+
+        function multiplicar(a, b){
+            return a * b
+        }
+
+        //Invocacion de funciones
+        miFuncion()
+
+        console.log(suma())
+        
+        console.log(multiplicar(12,12))
+
+        //Función Expresada
+        //Funcioón anonima, sin nombre, se le asigna como valor a una variable
+        //Esta función no se puede llamar antes de su declaración
+        const funcionExpresada = function(){
+            console.log("Esto es una funcion expresada, es decir una funcion que se le ha asignado como valor a una variable. Esta función no se puede llamar antes de su declaración");
+        }
+        
+        funcionExpresada()
+
+        
+        //--------------------------- ARREGLOS --------------------------------
+        const a = []
+        const b = ["Hola", 1, 1.6784, true, 'Hey', false, ["A", "B", "C"]]
+        console.log(a)
+        console.log(b)
+        console.log(a.length)
+        console.log(b.length)
+        console.log(b[4])
+        console.log(b[6][1])
+
+        //Otra forma de crear un arreglo
+        const c = Array.of("A", 1, "B", 2)
+        console.log(c)
+
+        //Crear un arreglo con un tamaño fijo y asignarle un valor por defecto
+        const d = Array(50).fill(false)
+        console.log(d)
+
+        //Ejemplo de, aplicar una función por cada elemento de una lista
+        const colores = ["Azul", "Verde", "Rojo", "Negro"]
+        colores.forEach(function(ele, index) {
+            console.log(`<li id=${index}> ${ele} <\li>`)
+        })
+
+        */
+
+        //------------------------ OBJETOS -----------------------
+
+        //JUego llave- valor
+        const empleado = {
+            nombre: "Juan",
+            apellido: "Rodriguez",
+            edad: 30,
+            hobbies: ["TV", "Video Juegos", "Libros"],
+            salario: 1.000,
+            hijos: false,
+
+            saludar: function(){
+                console.log("Hola soy " + this.nombre)
+            }
+        }
+
+        //Imprimimos el objeto por consola
+        console.log(empleado)
+        console.log(empleado.saludar())
 
     </script>
 
