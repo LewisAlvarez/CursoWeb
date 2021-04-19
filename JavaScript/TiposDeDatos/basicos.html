@@ -218,7 +218,7 @@
         funcionExpresada()
 
         
-        //--------------------------- ARREGLOS --------------------------------
+        //------------------------------------------- ARREGLOS ----------------------------------------------
         const a = []
         const b = ["Hola", 1, 1.6784, true, 'Hey', false, ["A", "B", "C"]]
         console.log(a)
@@ -244,7 +244,7 @@
 
         
 
-        //------------------------ OBJETOS -----------------------
+        //--------------------------------------------------------- OBJETOS -----------------------------------
 
         //Juego llave- valor
         const empleado = {
@@ -266,7 +266,7 @@
 
         */
 
-        //----------------------- CONDICIONALES ---------------------------------
+        //---------------------------------------- CONDICIONALES ----------------------------------------------
 
     /*
         let edad = 17
@@ -335,7 +335,7 @@
         */
     
 
-        //-------------------------- BUCLES / LOOPS ------------------------------
+        //--------------------------------------------- BUCLES / LOOPS -----------------------------------------------
 
         /*
         let contador = 0;
@@ -346,6 +346,7 @@
         }
         */
 
+        /*
         for (let index = 0; index < 5; index++) {
             //console.log("for " + index)
         }
@@ -377,6 +378,45 @@
         let cadena = "Hola Mundo"
         for (const caracter of cadena) {
             console.log(caracter)
+        }
+
+        */
+
+        //------------------------------------------------ MANEJO DE EXCEPCIONES -------------------------------------
+        //SENTENCIA, TRY-CATCH-FINALLY
+
+        /*
+        try {
+            //let division = 5 / 0
+            varibale;
+        } catch (error) {
+            console.log("VAriable no declarada")
+            console.log(error)
+        } finally{
+            //La sentencia finally siempre se va a ejecutar independientemente si ocurre la excpeción o no.
+            console.log("Este bloque siempre se va a ejecutar")
+        }
+
+        */
+
+        const numeros = [1,2,3,4,5,6,7,8,9]
+
+        //Para salirse de un bucle antes de terminar la ejecucuón. BREAK --> Se usa para romper una estructura.
+
+        for (let index = 0; index < numeros.length; index++) {
+            if (numeros[index]===5){
+                break;
+            }
+            console.log(numeros[index])
+        }
+
+        //Usar CONTINUE para saltarse una posición en el recorrido de un for.
+
+        for (let index = 0; index < numeros.length; index++) {
+            if (index===5){
+                continue;
+            }
+            console.log(numeros[index])
         }
 
     </script>

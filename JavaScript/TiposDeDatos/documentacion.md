@@ -37,3 +37,9 @@ NaN --> Not a Number
     * Para recorrer cualquier objeto de javascript
 
 
+#### Sentencias BREAK y CONTINUE
+
+    * BREAK: Se usa para romper una estructura, por ejemplo salirse de un for dada una condición
+
+    * CONTINUE: Se usa para saltarse una condición dentro d euna estructura, por ejemplo saltar una posición en un  recorrido de un arreglo.
+
