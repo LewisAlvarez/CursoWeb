@@ -43,3 +43,14 @@ NaN --> Not a Number
 
     * CONTINUE: Se usa para saltarse una condición dentro d euna estructura, por ejemplo saltar una posición en un  recorrido de un arreglo.
 
+
+
+## Programación Orientada a Objetos
+
+    1. Clase: Modelo a seguir
+    2. Objeto: Instancia de una clase
+    3. Atributo: Características o propiedades de un objeto
+    4. Método: Funciones que puede realizar un objeto
+
+
+

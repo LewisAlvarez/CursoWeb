@@ -506,6 +506,8 @@
 
         //----------------------------------------------------------- ARROW FUNCTIONS -------------------------------------
         
+        /*
+
         //Caso 1: La función solo tiene una linea y no tiene parametro
         const saludar = () => console.log("Hola")
 
@@ -539,6 +541,43 @@
             console.log(`El elemento ${dato} se encuentra
             en la posición ${index}`)
         })
+
+        */
+
+        //----------------------------------------------------------PROTOTIPOS --------------------------------------
+
+
+        //Es un mecanismo por el cual un objeto puede heredar características y métodos
+
+        //Función constructura
+        //En esta función solo se deben escribir los atributos por buenas practicas, los métodos se hacen de otra manera
+
+        function Animal(nombre, genero){
+            //Atributos
+            this.nombre = nombre
+            this.genero = genero
+        }
+
+        //Forma correcto de escribir los métodos para la declaración de los prototipos
+
+        Animal.prototype.sonar = function (){
+            console.log("Hago sonidos porque estoy vivo")
+        }
+
+        Animal.prototype.saludar = function (){
+            console.log(`Hola mi nombre es ${this.nombre}`)
+        }
+
+        //Creo objetos de la función constructura
+        
+        const dog = new Animal('Tommy', 'Perro')
+        const cat = new Animal('Talibana', 'Gato')
+
+        console.log(dog)
+        console.log(cat)
+        console.log(dog.sonar())
+        console.log(cat.saludar())
+
 
     </script>
 
