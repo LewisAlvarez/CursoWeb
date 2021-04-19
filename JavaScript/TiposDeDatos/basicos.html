@@ -399,6 +399,7 @@
 
         */
 
+        /*
         const numeros = [1,2,3,4,5,6,7,8,9]
 
         //Para salirse de un bucle antes de terminar la ejecucuón. BREAK --> Se usa para romper una estructura.
@@ -418,6 +419,36 @@
             }
             console.log(numeros[index])
         }
+
+        */
+
+        //-------------------------------------------------------- DESTRUCTURACIÓN ------------------------------------
+        
+        //SIN destructuración
+        const numeros = [1,2,3]
+
+        //Para ubicar los valores del arreglo en variables diferentes tendría que: Crear una variable para cada valor y asignarselo a una nueva variable
+
+        let uno = numeros[0], dos = numeros[1], tres = numeros[2]
+
+        console.log(uno, dos, tres)
+
+        //CON destructuración
+        const [one, two, three] = numeros
+
+        console.log(one, two, three)
+
+        const persona = {
+            nombre: 'Juan',
+            apellido: 'Valdez',
+            edad: 20
+        }
+
+        let {nombre, apellido, edad} = persona
+
+        console.log(nombre, apellido, edad)
+
+        
 
     </script>
 
