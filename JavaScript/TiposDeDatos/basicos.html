@@ -424,6 +424,7 @@
 
         //-------------------------------------------------------- DESTRUCTURACIÓN ------------------------------------
         
+        /*
         //SIN destructuración
         const numeros = [1,2,3]
 
@@ -448,7 +449,57 @@
 
         console.log(nombre, apellido, edad)
 
+        */
+
+        //------------------------------------------------ OBJETOS LITERALES -----------------------------
+
+        /*
+        let nombre = 'Tommy'
+        let edad = 8
+
+        const dog = {
+            nombre,
+            edad,
+            raza :'Labrador',
+            ladrar(){
+                console.log("Wuaa Wuaaaa!!!")
+            }
+        }
+
+        console.log(dog)
+        dog.ladrar()
+
+        */
+
+        //----------------------------------------------PARAMETROS REST Y OPERADOR SPREAD --------------------------
+        //Cuando no sé cuantos paratros recibirá mi función
         
+        //Parametros REST
+        function sumar(a,b, ...c){
+            let resultado = a + b
+            c.forEach(function(e) {
+                resultado += e
+            });
+
+            return resultado
+        }
+
+        console.log(sumar(1,2))
+        console.log(sumar(1,2,3))
+        console.log(sumar(1,2,3,3,4,6,7,6,4,3,6,4))
+
+        //SPREAD OPERATOR -- OPERADOR DE PROPAGACIÓN
+
+        const arr1 = [1,2,3,4,5]
+        const arr2 = [6,7,8,9,0]
+
+        console.log(arr1, arr2)
+
+        //Crear un arreglo nuevo a partir de arr1 y arr2, uniendo los valores de ambos arreglos
+
+        arr3 = [...arr1, ...arr2]
+        console.log(arr3)
+
 
     </script>
 
