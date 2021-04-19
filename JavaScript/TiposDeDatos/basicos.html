@@ -474,6 +474,8 @@
         //----------------------------------------------PARAMETROS REST Y OPERADOR SPREAD --------------------------
         //Cuando no sé cuantos paratros recibirá mi función
         
+        /*
+
         //Parametros REST
         function sumar(a,b, ...c){
             let resultado = a + b
@@ -500,6 +502,43 @@
         arr3 = [...arr1, ...arr2]
         console.log(arr3)
 
+        */
+
+        //----------------------------------------------------------- ARROW FUNCTIONS -------------------------------------
+        
+        //Caso 1: La función solo tiene una linea y no tiene parametro
+        const saludar = () => console.log("Hola")
+
+        //Caso 2: La función solo tiene una linea y tiene 1 solo parametro (nombre)
+        const saludarNombre = nombre => console.log(`Hola" + ${nombre}`)
+        
+        //Caso 3: la función tiene más de 1 parametro y más de una linea interna
+
+        const saludarCompleto = (nombre, hora) => {
+            if (hora > 12){
+                console.log(`Hola ${nombre} buenas tardes, Hora: ${hora}`)
+            }else{
+                console.log(`Hola ${nombre} buenos dias, Hora: ${hora}`)
+            }
+        }
+    
+        saludar()
+        saludarNombre('Victor Lewis')
+        saludarCompleto('John Smith', 17)
+
+
+        //Caso 4: para retornar algo en una linea
+        const suma = (a,b) => a+b; // En este caso no es necesario poner el return
+
+        console.log(suma(8,10))
+
+        //Caso 5: Usarlo en un FOrEacj metodo para recorrer arreglos
+        const marcas = ['Chevrolet', 'Honda', 'Kia', 'Toyota', 'Renault']
+
+        marcas.forEach((dato, index) => {
+            console.log(`El elemento ${dato} se encuentra
+            en la posición ${index}`)
+        })
 
     </script>
 
