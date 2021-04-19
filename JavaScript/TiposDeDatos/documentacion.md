@@ -26,4 +26,14 @@ Null --> Una variable dond eel programador intencionalmente le asigna el valor n
 
 NaN --> Not a Number
 
+# Bucles
+
+### For in
+
+    * Para recorrer los atributos de un objeto primitivo.
+
+### For of
+
+    * Para recorrer cualquier objeto de javascript
+
 

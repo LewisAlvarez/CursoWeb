@@ -242,11 +242,11 @@
             console.log(`<li id=${index}> ${ele} <\li>`)
         })
 
-        */
+        
 
         //------------------------ OBJETOS -----------------------
 
-        //JUego llave- valor
+        //Juego llave- valor
         const empleado = {
             nombre: "Juan",
             apellido: "Rodriguez",
@@ -263,6 +263,121 @@
         //Imprimimos el objeto por consola
         console.log(empleado)
         console.log(empleado.saludar())
+
+        */
+
+        //----------------------- CONDICIONALES ---------------------------------
+
+    /*
+        let edad = 17
+
+        if (edad > 17){
+            console.log("Eres mayor de edad")
+        }else{
+            console.log("Eres menor de edad")
+        }
+
+
+        let hora = 15
+
+        if (hora > 0 && hora < 6) {
+            console.log("Dejame dormir")
+        } else if (hora >= 6 && hora <= 12) {
+            console.log("Buenos dias")
+        }else if (hora > 12 && hora < 19){
+            console.log("Buenos tardes")
+        }else if(hora >= 19 && hora <= 24){
+            console.log("Buenos noches")
+        }
+    */
+
+        //Sentencia Switch case
+
+        /*
+        domingo = 0
+        lunes = 1
+        martes = 2
+        miercoles = 3
+        jueves = 4
+        viernes = 5
+        sabado = 6
+        */
+
+        /*
+        let dia = 5
+
+        switch(dia){
+            case 0:
+                console.log("Hoy es Domingo")
+            break;
+            case 1:
+                console.log("Hoy es Lunes")
+            break;
+            case 2:
+                console.log("Hoy es Martes")
+            break;
+            case 3:
+                console.log("Hoy es Miercoles")
+            break;
+            case 4:
+                console.log("Hoy es Jueves")
+            break;
+            case 5:
+                console.log("Hoy es Viernes")
+            break;
+            case 6:
+                console.log("Hoy es Sabado")
+            break;
+            default:
+                console.log("El dia no existe")
+        }
+
+        */
+    
+
+        //-------------------------- BUCLES / LOOPS ------------------------------
+
+        /*
+        let contador = 0;
+
+        while(contador < 10){
+            console.log(contador)
+            contador++
+        }
+        */
+
+        for (let index = 0; index < 5; index++) {
+            //console.log("for " + index)
+        }
+
+        let animales = ["Perro", "Gato", "Tigre", "Tortuga", "Delfin", "Leopardo"]
+
+        for (let index = 0; index < animales.length; index++) {
+            let element = animales[index];
+            //console.log(element)
+        }
+
+        //For In: Para recorrer los atributos de un objeto
+
+        const persona = {
+            nombre: "Pepito",
+            apellido: "Perez",
+            edad: 35
+        }
+
+        for (const propiedad in persona){
+            console.log(`Key: ${propiedad} Value: ${persona[propiedad]}`)
+        }
+
+        //For Of: Para recorrer los valosres/atributos de cualquier objeto en JavaScript
+        for (const iterator of animales) {
+            console.log(iterator)
+        }
+
+        let cadena = "Hola Mundo"
+        for (const caracter of cadena) {
+            console.log(caracter)
+        }
 
     </script>
 
