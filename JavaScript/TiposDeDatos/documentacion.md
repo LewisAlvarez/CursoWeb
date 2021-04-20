@@ -1,4 +1,4 @@
-##Tipos de datos
+## Tipos de datos
 
 1. Primitivos
 

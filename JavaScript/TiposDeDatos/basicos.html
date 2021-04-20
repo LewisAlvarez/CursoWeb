@@ -583,7 +583,44 @@
 
         //-------------------------------------------- CLASES Y HERENCIA -----------------------------------------
         
+        class Animal{
 
+            constructor(nombre, genero){
+                this.nombre = nombre
+                this.genero = genero
+            }
+
+            //Metodos
+
+            saludar(){
+                console.log(`Hola soy ${this.nombre}, tu mascota!`)
+            }
+        }
+
+        const tommy = new Animal('Tommy', 'Macho')
+        const lola = new Animal('Lola', 'Hembra')
+
+        console.log(tommy)
+        console.log(lola)
+
+        tommy.saludar()
+
+        //HERENCIA
+        class Perro extends Animal{
+            constructor(nombre, genero, raza){
+                super(nombre, genero) //Se manda a llamar el método de la clase padre (Animal)
+                this.raza = raza
+            }
+
+            ladrar(){
+                console.log("Wuaaa Wuaaa!!")
+            }
+        }
+
+        const zeus = new Perro('Zeus', 'Macho', 'Pitbull')
+        console.log(zeus)
+        zeus.ladrar()
+        zeus.saludar()
 
     </script>
 
