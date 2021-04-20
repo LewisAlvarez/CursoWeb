@@ -583,6 +583,7 @@
 
         //-------------------------------------------- CLASES Y HERENCIA -----------------------------------------
         
+        /*
         class Animal{
 
             constructor(nombre, genero){
@@ -643,6 +644,157 @@
         zeus.setRaza = 'Grand Danés'
 
         console.log(zeus.getRaza)
+
+        */
+
+        //-----------------------------------------------------------OBJETOS DE JS ----------------------------------------
+
+        /*
+        console.clear() //Limpiar la consola
+        console.log(document)
+        console.dir(document)
+
+        console.clear()
+
+        console.log(console)
+        console.table(Object.entries(console)) //Para representación en una tabla de las funciones dle objeto console
+        console.clear()
+        //Tomar tiempo de cuanto tarde el bloque de codigo en ejecutarse
+        console.time("Cuanto tarda mi codigo: ")
+
+        const arreglo = Array(1000000)
+
+        for (let i = 0; i < arreglo.length; i++){
+            arreglo[i] = i
+        }
+
+        console.timeEnd("Cuanto tarda mi codigo: ")
+
+        console.clear()
+
+        //------------------------------------------------- OBJETO DATE ----------------------------------------
+
+        console.log(Date())
+
+        let fecha = new Date()
+        console.log(fecha)
+
+        //Dia del mes
+        console.log(fecha.getDate())
+        //Dia
+        console.log(fecha.getDay())
+        //Mes
+        console.log(fecha.getMonth())
+        //Año
+        console.log(fecha.getFullYear())
+
+        //Hora minutos y segundos
+        console.log(fecha.getHours())
+        console.log(fecha.getMinutes())
+        console.log(fecha.getSeconds())
+
+        
+        console.log(fecha.toLocaleString())
+        console.log(fecha.toLocaleDateString())
+        
+        console.log(fecha.getUTCDay())
+        
+        console.clear()
+
+        //----------------------------------------------------------------------- MATH ------------------------------------------
+        console.log(Math)
+        console.log(Math.PI)
+        console.log(Math.abs(-7.9))
+        console.log(Math.ceil(7.5)) //Redondear techo (redondea al numero entero mayor)
+        console.log(Math.floor(7.5)) //Redondar piso
+        console.log(Math.round(7.6))
+        console.log(Math.sqrt(9))
+        console.log(Math.pow(2,5)) //Potencias
+
+        //Me dice si un numero es positivo negativo o cero: Retorna un numero entero
+        console.log(Math.sign(100))
+        console.log(Math.sign(-45))
+        console.log(Math.sign(0))
+
+        //Aleatorio
+        console.log(Math.random()) //Siempre da un numero aleatorio entre cero y 1
+        console.log(Math.round(Math.random()*1000)) //Aleatorio entre 0 y 1000 redondeado.
+
+        console.clear()
+
+        //---------------------------------------------------- OPERADOR CORTOCIRCUIDO -----------------------------
+
+        //Cortocircuito con Or
+
+        //Toma el valor de la derecha del Or
+
+        function saludar(nombre){
+            nombre = nombre || "Desconocido" //A nombre, le asigno lo que venga por parametro o en su defecto "desconocido"
+            console.log(`Hola ${nombre}`)
+        }
+
+        saludar("Car")
+        saludar() // Si no le paso parametro, debe imprimir desconocido
+        console.clear()
+
+        //Cortocircuito con And --> Busca valores que tienden a falso
+
+        //----------------------------------------ALERT, CONFIRM, PROMPT -------------------------------------------
+
+        console.log(window)
+
+        let alerta = alert('Hola, esto es una alerta')
+        let confirmacion = confirm('Hola, esto es una confirmacion')
+        let aviso = prompt('Hola, esto es una prompt y le permite al usuario escribir un valor')
+
+        console.log(alerta)
+        console.log(confirmacion)
+        console.log(aviso)
+
+        console.clear()
+
+        */
+
+        //------------------------------------------ EXPRESIONES REGULARES ---------------------------------------------
+        //Validaciones de cadena de texto, patrones
+
+        /*
+        let cadena = "Esto una una cadena de resto 1par un ejemplo de una expresion regularcadena, deesta manera podremos realizar varias pruebas sobre si podemos encontrar cietas palabras en un texto."
+        const expReg = new RegExp("Cadena","ig")
+        const expReg2 = /\d/ig; //Otra forma de declarar la expresion regular
+
+
+        //Probar si la condición d ela función recular se encuentra
+        console.log(expReg2.test(cadena))
+
+        
+        console.clear()
+
+        */
+
+        //--------------------------------------------------- FUNCIONES ANONIMAS AUTOEJECUTABLE-------------------------------------------------
+
+        
+
+        (function() {
+            console.log("Mi primer funcion anonima autoejecutable");
+        })();
+
+        (function(d,w,c) {
+            console.log("Mi segunda IIFE")
+            console.log(d)
+            c.log(w)
+        })(document,window,console);
+
+        //Otras formas de ejecutar la función anonima autoejecutable
+        +function(){
+            console.log("versión unaria")
+        }();
+
+        !function(){
+            console.log("versión facebook")
+        }()
+
 
 
     </script>
