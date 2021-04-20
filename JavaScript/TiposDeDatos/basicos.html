@@ -615,12 +615,35 @@
             ladrar(){
                 console.log("Wuaaa Wuaaa!!")
             }
+
+            static queEs(){
+                console.log("Soy un perro y esto representa un método estatico, el cual se ejecuta sin haber instanciado un objeto")
+            }
+
+            //Gettter and Setters
+
+            get getRaza(){
+                return this.raza
+            }
+
+            set setRaza(raza){
+                this.raza = raza
+            }
         }
+
+        Perro.queEs()
 
         const zeus = new Perro('Zeus', 'Macho', 'Pitbull')
         console.log(zeus)
         zeus.ladrar()
         zeus.saludar()
+
+        console.log(zeus.getRaza)
+
+        zeus.setRaza = 'Grand Danés'
+
+        console.log(zeus.getRaza)
+
 
     </script>
 
