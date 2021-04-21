@@ -21,12 +21,13 @@ console.log(aleatorio())
 console.log(aleatorio())
 
 //EJERCICIO 10
-
-const capicua = (numero = "") =>{
-    let num = numero + "";
+//Tanto para numeros como para cadenas de texto
+const capicua = (numero) =>{
+    
     if(!num){
         console.error("No ha escrito ningún valor")
     }else{
+        let num = numero + "";
         let reverso = num.split("").reverse().join("")
         return (num===reverso) ? `Son iguales ${num} = ${reverso}: True` : `Son diferentes ${num} != ${reverso}: False`
     }
