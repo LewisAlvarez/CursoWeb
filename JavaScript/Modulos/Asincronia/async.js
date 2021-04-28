@@ -1,5 +1,6 @@
 //TEMPORIZADORES
 
+/*
 console.log("inicio")
 
 let temp = setTimeout(() => {
@@ -19,3 +20,57 @@ let temporizador = setInterval(() => {
 //Para run setTimeOut
 clearTimeout(temp)
 clearInterval(temporizador)
+*/
+
+//ASINCRONIA Y EVENT LOOP
+
+/*
+    CODIGO SINCRONO BLOQUEANTE
+*/
+(() => {
+
+    console.log("Código síncrono")
+    console.log("INICIO")
+
+    function dos(){
+        console.log("Dos")
+    }
+
+    function uno(){
+        console.log("Uno")
+        dos()
+        console.log("Tres")
+    }
+
+    uno()
+    console.log("FIN")
+
+})();
+
+console.log("***********************");
+/*
+    CODIGO ASINCRONO NO BLOQUEANTE
+*/
+(() => {
+
+    console.log("Código Asíncrono")
+    console.log("INICIO")
+
+    function dos(){
+        setTimeout(() => {
+            console.log("Dos") 
+        }, 1000);
+    }
+
+    function uno(){
+        setTimeout(() => {
+            console.log("Uno")
+        }, 0);
+        dos()
+        console.log("Tres")
+    }
+
+    uno()
+    console.log("FIN")
+    
+})();
