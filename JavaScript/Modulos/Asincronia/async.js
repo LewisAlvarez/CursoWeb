@@ -118,7 +118,7 @@ console.log(Object.getOwnPropertySymbols(persona))
 */
 //-------------------------------------------------------------- SETS -----------------------------------------------
 //Arreglo de datos únicos
-
+/*
 const set = new Set(['Hola', 3, 3, 3, 4, 6, 4, true, false, 'hola'])
 const set2 = new Set([])
 console.log(set)
@@ -142,3 +142,21 @@ console.log(set2)
 
 //Validar si un dato se encuentra en la estructura de datos SET
 console.log(set2.has(4))
+*/
+
+//------------------------ TIPO de Dato MAP ----------------------------------
+//Colección de datos
+let mapa = new Map()
+//Llave-VAlor
+mapa.set("Nombre", "Car")
+mapa.set("Apellido", "Cossio")
+mapa.set("Edad", 25)
+mapa.set("Tel", 4358939828)
+mapa.set("ID", 'C456')
+
+console.log(mapa)
+console.log(mapa.size)
+console.log(mapa.has("Correo"))
+console.log(mapa.has("Edad"))
+console.log(mapa.get('Tel'))
+
