@@ -162,6 +162,7 @@ console.log(mapa.has("Edad"))
 console.log(mapa.get('Tel'))
 */
 //------------------------------ WEAKSET Y WEAKMAP ---------------------------------
+/*
 const ws = new WeakSet()
 
 //Debo agregar elemento por elemento, solo se pueden agregar objetos
@@ -188,3 +189,26 @@ wm.set(b, 2)
 wm.set(c, 3)
 
 console.log(wm)
+*/
+
+//------------------------------------------- ITERABLES ----------------------------------------
+//const iterable = [1,2,3,4,5,6,7,8,9,0]
+const iterable = 'Hola Mundo'
+
+const iterador = iterable[Symbol.iterator]()
+
+console.log(iterable)
+console.log(iterador)
+
+//console.log(iterador.next())
+//console.log(iterador.next())
+//console.log(iterador.next())
+//console.log(iterador.next())
+
+//Para recorrer
+let next = iterador.next()
+
+while(!next.done){
+    console.log(next.value)
+    next = iterador.next()
+}
