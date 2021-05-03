@@ -85,6 +85,7 @@ console.log("***********************");
 //NUEVOS TIPOS DE DE DATOS
 
 //symbol --> Crea una referencia única del tipo de dato
+/*
 let id = Symbol('id1') //Etiqueta
 let id2 = Symbol('id2')
 
@@ -114,3 +115,30 @@ persona[SALUDAR]()
 //Listar los symbols a manera de arreglo
 
 console.log(Object.getOwnPropertySymbols(persona))
+*/
+//-------------------------------------------------------------- SETS -----------------------------------------------
+//Arreglo de datos únicos
+
+const set = new Set(['Hola', 3, 3, 3, 4, 6, 4, true, false, 'hola'])
+const set2 = new Set([])
+console.log(set)
+
+set2.add(1)
+set2.add(1)
+set2.add(1)
+set2.add(4)
+set2.add(false)
+set2.add('Bye')
+set2.add('Hello')
+
+console.log(set2)
+
+console.log(set.size)
+console.log(set2.size)
+
+//Eliminar objetos
+set2.delete('Hello')
+console.log(set2)
+
+//Validar si un dato se encuentra en la estructura de datos SET
+console.log(set2.has(4))
