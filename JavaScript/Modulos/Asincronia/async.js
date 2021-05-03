@@ -146,6 +146,7 @@ console.log(set2.has(4))
 
 //------------------------ TIPO de Dato MAP ----------------------------------
 //Colección de datos
+/*
 let mapa = new Map()
 //Llave-VAlor
 mapa.set("Nombre", "Car")
@@ -159,4 +160,31 @@ console.log(mapa.size)
 console.log(mapa.has("Correo"))
 console.log(mapa.has("Edad"))
 console.log(mapa.get('Tel'))
+*/
+//------------------------------ WEAKSET Y WEAKMAP ---------------------------------
+const ws = new WeakSet()
 
+//Debo agregar elemento por elemento, solo se pueden agregar objetos
+
+let uno = {'valor1':1}
+let dos = {'valor2':2}
+let tres = {'valor3':3}
+
+ws.add(uno)
+ws.add(dos)
+ws.add(tres)
+
+console.log(ws)
+
+//------------ weakmap
+const wm = new WeakMap()
+
+let a = {'valor1':1}
+let b = {'valor2':2}
+let c = {'valor3':3}
+
+wm.set(a, 1)
+wm.set(b, 2)
+wm.set(c, 3)
+
+console.log(wm)
