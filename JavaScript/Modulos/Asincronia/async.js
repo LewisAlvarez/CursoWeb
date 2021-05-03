@@ -27,6 +27,8 @@ clearInterval(temporizador)
 /*
     CODIGO SINCRONO BLOQUEANTE
 */
+
+/*
 (() => {
 
     console.log("Código síncrono")
@@ -51,6 +53,8 @@ console.log("***********************");
 /*
     CODIGO ASINCRONO NO BLOQUEANTE
 */
+
+/*
 (() => {
 
     console.log("Código Asíncrono")
@@ -74,3 +78,39 @@ console.log("***********************");
     console.log("FIN")
     
 })();
+
+*/
+
+//----------------------------------- SYMBOLS --------------------------------------------
+//NUEVOS TIPOS DE DE DATOS
+
+//symbol --> Crea una referencia única del tipo de dato
+let id = Symbol('id1') //Etiqueta
+let id2 = Symbol('id2')
+
+console.log(id === id2)
+console.log(id, id2)
+
+const NOMBRE = Symbol()
+const SALUDAR = Symbol()
+
+const persona = {
+    [NOMBRE] : 'Car'
+};
+
+console.log(persona)
+
+persona.NOMBRE = 'Lewis Car'
+console.log(persona)
+
+//Para funciones
+persona[SALUDAR] = function(){
+    console.log(`Hola soy ${persona[NOMBRE]}`)
+}
+
+console.log(persona)
+persona[SALUDAR]()
+
+//Listar los symbols a manera de arreglo
+
+console.log(Object.getOwnPropertySymbols(persona))
