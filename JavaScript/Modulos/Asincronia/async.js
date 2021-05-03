@@ -193,6 +193,7 @@ console.log(wm)
 
 //------------------------------------------- ITERABLES ----------------------------------------
 //const iterable = [1,2,3,4,5,6,7,8,9,0]
+/*
 const iterable = 'Hola Mundo'
 
 const iterador = iterable[Symbol.iterator]()
@@ -212,3 +213,34 @@ while(!next.done){
     console.log(next.value)
     next = iterador.next()
 }
+*/
+
+//--------------------------------------------- GENERATORS ---------------------------------------
+//fUNCION PARA TRABAJAR CON LOS ITERADORES
+
+//Para indicarla a javascript que vamos a trabajar con un generador agregamos "*" al lado de la palabra function
+
+function* iterable(){
+    yield 'Hola';
+    console.log("Hola desde consola");
+    yield 'hola 2';
+    console.log("Seguimos con más instrucciones en nuestro código");
+    yield 'Hola 3'
+    yield 'Hola 4'
+}
+
+let iterador = iterable()
+
+/*console.log(iterador.next())
+console.log(iterador.next())
+console.log(iterador.next())
+console.log(iterador.next())
+console.log(iterador.next())*/
+
+for (const yieldd of iterador) {
+    console.log(yieldd)
+}
+
+//Guardar el código una una función generadora en un arreglo
+const arr = [...iterable()]
+console.log(arr)
