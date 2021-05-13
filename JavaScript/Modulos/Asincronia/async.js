@@ -251,6 +251,7 @@ console.log(arr)
 */
 
 //---------------------------------- OBJETOS DINAMICOS ---------------------------------------
+/*
 let aleatorio = Math.round(Math.random() * 100 + 6)
 
 const objUsuarios = {
@@ -267,3 +268,28 @@ usuarios.forEach((usuarios,index) => objUsuarios[`id_${index}`] = usuarios)
 
 console.log(objUsuarios)
 console.log('hola')
+*/
+
+//------------------------------------------ CALL, APPLY, BIND -----------------------------------
+
+console.log(this)
+console.log(window)
+
+//this.lugar = 'Contexto Global'
+
+function saludar(saludo, aQuien){
+    console.log(`${saludo} ${aQuien} desde el ${this.lugar}`)
+}
+
+//saludar()
+
+const obj = {
+    lugar: "Contexto objeto"
+}
+
+//Llamar contexto de otro objeto : call
+//La diferencias entre call y apply es cómo recibe los diferentes pa´rametros}
+
+saludar.call(obj, 'Hola', 'Juan') //-> Se pasan los parametros normal de la dunción llamada (En este caso saludar())
+saludar.apply(obj, ['Adiós', 'Juan']) //-> Se pasan los parametros en forma de arreglo
+//saludar.call(null, 'Hello', 'CAr')
