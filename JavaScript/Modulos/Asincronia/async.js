@@ -220,6 +220,7 @@ while(!next.done){
 
 //Para indicarla a javascript que vamos a trabajar con un generador agregamos "*" al lado de la palabra function
 
+/*
 function* iterable(){
     yield 'Hola';
     console.log("Hola desde consola");
@@ -229,14 +230,16 @@ function* iterable(){
     yield 'Hola 4'
 }
 
+
 let iterador = iterable()
+*/
 
 /*console.log(iterador.next())
 console.log(iterador.next())
 console.log(iterador.next())
 console.log(iterador.next())
 console.log(iterador.next())*/
-
+/*
 for (const yieldd of iterador) {
     console.log(yieldd)
 }
@@ -244,3 +247,23 @@ for (const yieldd of iterador) {
 //Guardar el código una una función generadora en un arreglo
 const arr = [...iterable()]
 console.log(arr)
+
+*/
+
+//---------------------------------- OBJETOS DINAMICOS ---------------------------------------
+let aleatorio = Math.round(Math.random() * 100 + 6)
+
+const objUsuarios = {
+    propidad : 'Valor',
+    [`id_${aleatorio}`] : 'Valor Aleatorio'
+}
+
+console.log(objUsuarios)
+
+const usuarios = ["Car", "Jonathan", "Luisa", "Juan", "David", "Karen"]
+//En la siguiente linea recorreomos el arreglo de usuarios y por cada usuario nos creamos una propieda dinamicamente en el
+//Objeto objUsuarios y le asignamos el nombre contenido por cada posición del arreglo
+usuarios.forEach((usuarios,index) => objUsuarios[`id_${index}`] = usuarios)
+
+console.log(objUsuarios)
+console.log('hola')
