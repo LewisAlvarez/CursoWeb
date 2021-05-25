@@ -181,6 +181,8 @@ $cards.forEach((el) => { el.classList.add("rotate-45") })
 */
 
 //------------------ DOM: Texto y HTML -----------------
+
+/*
 const $texto = document.getElementById("que-es")
 console.log($texto) 
 
@@ -203,5 +205,74 @@ let text = `
 $texto.textContent = text
 $texto.innerHTML = text
 
+console.clear()
 
-//Opcion 2
+*/
+//----------------- Recorrer elementos del DOM, Traversing ------------------------------//
+//Enfocado a las etiquetas como tal
+
+/*
+const $cards = document.querySelector(".cards")
+console.log($cards)
+console.log($cards.firstChild)
+console.log($cards.children)
+console.log($cards.children[3])
+
+console.clear()
+*/
+//--------------------- Creando elementos y Fragmentos ------------------------------- //
+
+//Creando y agregando 1 elemento
+const $figure = document.createElement("figure")
+const $img = document.createElement("img")
+const $figcaption = document.createElement("figcaption")
+const figcaptionText = document.createTextNode("Animals")
+const $cards = document.querySelector(".cards")
+
+$img.setAttribute("src", "https://placeimg.com/200/201/animals")
+$img.setAttribute("alt", "Animals")
+$figure.classList.add("card")
+
+$figcaption.appendChild(figcaptionText)
+$figure.appendChild($img)
+$figure.appendChild($figcaption)
+$cards.appendChild($figure)
+
+//Agregar un hijo
+$cards.appendChild($figure)
+
+//Creando y agregando varios elementos
+const estaciones = ["Primavera", "Otoño", "Verano", "Invierno"]
+const $ul = document.createElement("ul")
+
+document.writeln("<h3> Las cuatro estaciones del año son: </h3>")
+//Se agrega la lista al padre body
+document.body.appendChild($ul)
+
+estaciones.forEach((ele) => {
+    const $li = document.createElement("li")
+    $li.textContent = ele
+    $ul.appendChild($li)
+})
+
+//Para facilidad, buenas practicas y optimización usamos fragmentos para actualizar e iterar este y no directamente en el DOM
+//Ejemplo
+const meses = ["Enero", "Febrero", "Marzo", "Abril", "Mayo", "Junio", "Julio", "Agosto", "Septiempre", "Octubre", "Noviembre", "Diciembre"]
+const $ul2 = document.createElement("ul")
+const $fragment = document.createDocumentFragment()
+
+meses.forEach(ele =>{
+    const $li = document.createElement("li")
+    $li.textContent = ele
+    $fragment.appendChild($li) //--> Agregamos al fragmento
+})
+
+//Luego de tener todo agragado al fragmento, ahora sí agregamos a la lista ul
+$ul2.appendChild($fragment)
+document.writeln("<h3> Los meses del año son: </h3>")
+//Agregamos al body
+document.body.appendChild($ul2)
+
+
+
+
