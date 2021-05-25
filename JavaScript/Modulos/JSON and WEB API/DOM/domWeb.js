@@ -56,6 +56,8 @@ document.querySelectorAll(".card").forEach((el) =>{console.log(el)})
 
 //Acceder al valor de un atributo
 
+/*
+
 console.log(document.documentElement.lang)
 console.log(document.documentElement.getAttribute("lang"))
 
@@ -97,3 +99,45 @@ console.log($linkDom.dataset) // Retorna un mapa con todos los data-atributtes
 console.log($linkDom.getAttribute("data-id"))
 $linkDom.setAttribute("data.id", `${$linkDom.getAttribute("data-id")}`)
 console.log($linkDom.getAttribute("data-id"))
+
+*/
+
+//----------------------- DOM: Estilos y Variables CSS --------------------//
+
+const $linkDom = document.querySelector(".link-dom")
+console.log($linkDom.style) //Retorna un mapa de CSSStyles y todos los atributos posibles
+console.log($linkDom.getAttribute("style")) //Retorna los atributos internos de style
+console.log($linkDom.style.color)
+console.log($linkDom.style.backgroundColor)
+
+//Cambiar valores/atributos de un objeto: cambios de atributos css
+$linkDom.style.setProperty("text-decoration", "none")
+$linkDom.style.setProperty("display", "block")
+$linkDom.style.width = "60%"
+$linkDom.style.textAlign = "center"
+$linkDom.style.marginLeft = "auto"
+$linkDom.style.marginRight = "auto"
+$linkDom.style.padding = "1rem"
+$linkDom.style.borderRadius = ".5rem"
+
+//Variables CSS -- Custom Properties CSS
+//Accediendo a las variables y propiedades 
+const $html = document.documentElement
+const $body = document.body
+
+//Una variable en la cual se guardará el valor de un atributo
+let varDarkColor = getComputedStyle($html).getPropertyValue("--dark-color")
+let varYellowColor = getComputedStyle($html).getPropertyValue("--yellow-color")
+
+console.log(varDarkColor)
+console.log(varYellowColor)
+
+//Asignar el valor de las variables creando stilo en el body, en este caso al body
+$body.style.backgroundColor = varDarkColor
+$body.style.color = varYellowColor
+
+//Modificar la propiedad de una variable css
+$html.style.setProperty("--dark-color", "green")
+//Actualizamos el valor de la variable varDarkColor
+varDarkColor = getComputedStyle($html).getPropertyValue("--dark-color")
+$body.style.backgroundColor = varDarkColor
