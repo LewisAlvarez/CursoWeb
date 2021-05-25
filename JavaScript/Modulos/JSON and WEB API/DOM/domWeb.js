@@ -104,6 +104,7 @@ console.log($linkDom.getAttribute("data-id"))
 
 //----------------------- DOM: Estilos y Variables CSS --------------------//
 
+/*
 const $linkDom = document.querySelector(".link-dom")
 console.log($linkDom.style) //Retorna un mapa de CSSStyles y todos los atributos posibles
 console.log($linkDom.getAttribute("style")) //Retorna los atributos internos de style
@@ -141,3 +142,39 @@ $html.style.setProperty("--dark-color", "green")
 //Actualizamos el valor de la variable varDarkColor
 varDarkColor = getComputedStyle($html).getPropertyValue("--dark-color")
 $body.style.backgroundColor = varDarkColor
+
+
+console.clear()
+*/
+
+//------------------------ DOM: CLases CSS ------------------------//
+
+const $card = document.querySelector(".card")
+console.log($card)
+console.log($card.className) //nombre de la clase
+console.log($card.classList) //DOMTokenList
+
+//¿Tiene una clase específica?
+console.log($card.classList.contains("rotate-45")) //  True/False
+
+//Agregamos la clase rotate-45 ael queryselector (En este caso solo es para la imagen 1)
+$card.classList.add("rotate-45") //Rota 45 grados la imagen
+console.log($card.classList.contains("rotate-45"))
+
+//Quitar una clase
+$card.classList.remove("rotate-45")
+console.log($card.classList.contains("rotate-45"))
+
+// -------------- COMODIN ------------ //
+//Toggle --> Para agregar/eliminar -> si tiene la propiedad lo elimina y si no lo agrega
+$card.classList.toggle("rotate-45")
+console.log($card.classList.contains("rotate-45"))
+
+//Agregar más de una clase a la vez
+$card.classList.add("sepia", "opacity-80")
+
+/*
+//Rotar todas las imagenes
+const $cards = document.querySelectorAll(".card")
+$cards.forEach((el) => { el.classList.add("rotate-45") })
+*/
