@@ -273,6 +273,45 @@ document.writeln("<h3> Los meses del año son: </h3>")
 //Agregamos al body
 document.body.appendChild($ul2)
 
+console.clear()
 
+//--------------------------- Templates HTML ----------------------------- //
 
+const $claseCard = document.querySelector(".cards");
+const $template = document.getElementById("template-card").content;
+const $elFragment = document.createDocumentFragment();
+const cardContent = [
+    {
+        title: "Tecnología",
+        img:"https://placeimg.com/200/200/tech"
+    },
+    {
+        title: "Animales",
+        img:"https://placeimg.com/200/200/animals"
+    },
+    {
+        title: "Arquitectura",
+        img:"https://placeimg.com/200/200/arch"
+    },
+    {
+        title: "Gente",
+        img:"https://placeimg.com/200/200/people"
+    },
+    {
+        title: "Naturaleza",
+        img:"https://placeimg.com/200/200/nature"
+    }
+];
 
+//Por cada cardContent , seleccionamos dentro del template el atributo img y lo cambiamos por el valor que se encuentre en cardcontent
+cardContent.forEach(el => {
+    $template.querySelector("img").setAttribute("src", el.img)
+    $template.querySelector("img").setAttribute("alt", el.title)
+    $template.querySelector("figcaption").textContent = el.title
+    //Clonar el nodo del template pq solo esta disponible una vez, para el primero.
+    let $clone = document.importNode($template,true)  //--> clona todo
+    $elFragment.appendChild($clone)
+})
+
+//Se agrega el fragmento al dom
+$cards.appendChild($elFragment)
