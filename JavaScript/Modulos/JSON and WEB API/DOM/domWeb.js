@@ -321,7 +321,7 @@ $cards.appendChild($elFragment)
 */
 
 // --------------------------  MODIFICANDO ELEMENTOS ----------------------//
-
+/*
 //REEMPLAZAR UN NODO EXISTENTE
 const $cards = document.querySelector(".cards")
 const $newCard = document.createElement("figure")
@@ -349,3 +349,51 @@ $cards.removeChild($cards.lastElementChild)
 
 //Agregamos la copia (Agrega al final)
 document.body.appendChild($cloneCards)
+
+*/
+
+//Modificando Elementos 2
+//Nuevos metodos
+/* 
+.insertAdjacent...
+    .insertAdjacentElement(position,el)
+    .insertAdjacentHTML(position,html)
+    .insertAdjacentText(position,text)
+
+posiciones:
+    beforebegin (hermano anterior)
+    afterbegin (primer hijo)
+    beforeend (ultimo hijo)
+    afterend  (hermano siguiente)
+*/
+
+const $cards = document.querySelector(".cards")
+const $newCard = document.createElement("figure")
+
+let contentCard = `
+<img src="https://placeimg.com/200/200/any" alt="Any">
+<figcaption> </figcaption>
+`;
+
+$newCard.classList.add("card")
+
+//Insertando con los nuevos metodos
+
+/*
+$cards.insertAdjacentElement("beforebegin", $newCard)
+$cards.insertAdjacentElement("afterbegin", $newCard)
+$cards.insertAdjacentElement("afterend", $newCard)
+$cards.insertAdjacentElement("beforeend", $newCard)
+*/
+
+//Agregar contenido HTML (sin usar innerHtml)
+//Usando .insertAdjacentHTML(position,html)
+
+//$cards.insertAdjacentHTML("beforebegin", contentCard)
+//USANDO LOS 3 METODOS
+$newCard.insertAdjacentHTML("afterbegin", contentCard)
+$newCard.querySelector("figcaption").insertAdjacentText("afterbegin","Esto es texto ANY")
+$cards.insertAdjacentElement("afterbegin", $newCard)
+
+
+
