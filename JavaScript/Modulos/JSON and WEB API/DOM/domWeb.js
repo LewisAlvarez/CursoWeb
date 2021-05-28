@@ -222,6 +222,8 @@ console.clear()
 */
 //--------------------- Creando elementos y Fragmentos ------------------------------- //
 
+/*
+
 //Creando y agregando 1 elemento
 const $figure = document.createElement("figure")
 const $img = document.createElement("img")
@@ -315,3 +317,35 @@ cardContent.forEach(el => {
 
 //Se agrega el fragmento al dom
 $cards.appendChild($elFragment)
+
+*/
+
+// --------------------------  MODIFICANDO ELEMENTOS ----------------------//
+
+//REEMPLAZAR UN NODO EXISTENTE
+const $cards = document.querySelector(".cards")
+const $newCard = document.createElement("figure")
+const $cloneCards = $cards.cloneNode(true)
+
+//Agrego codigo html
+$newCard.innerHTML = `
+<img src="https://placeimg.com/200/200/any" alt="Any">
+<figcaption>Any</figcaption>
+`;
+
+//console.log($cards)
+//Le asignamos a newCard la clas "card"
+$newCard.classList.add("card")
+//Reemplazamos un nodo existente por "Any" (nuevoNodo, nodoAReemplazar)
+$cards.replaceChild($newCard, $cards.children[2])
+
+//Reemplazar dado un nodo de referencia
+//Insertar un nodo antes de un nodo de referencia (nuevoNodo, nodoReferencia)
+$cards.insertBefore($newCard, $cards.firstElementChild)
+
+//Eliminar nodos
+//Eliminar el ultimo nodo
+$cards.removeChild($cards.lastElementChild)
+
+//Agregamos la copia (Agrega al final)
+document.body.appendChild($cloneCards)
