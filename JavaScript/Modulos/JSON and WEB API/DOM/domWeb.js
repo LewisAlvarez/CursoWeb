@@ -402,6 +402,7 @@ $cards.insertAdjacentElement("afterbegin", $newCard)
 */
 
 // --------------------------- MANEJADORES DE EVENTOS ------------------------------ //
+
 function holaMundo(){
     alert("Hola accediste a un evento mediante un boton");
     console.log(event);
@@ -444,3 +445,21 @@ const removerEvento = (e) => {
 }
 
 $eventoRemovedor.addEventListener("dblclick", removerEvento)
+
+
+//-------------------------------------- Flujo de Eventos -----------------------------------///
+
+//Propagación del evento, (Burbuja y Captura)
+
+const $divsEventos = document.querySelectorAll(".eventos-flujos div")
+console.log($divsEventos)
+
+function flujoEventos(e) {
+    console.log(`Hola te saluda: ${this.className}, el click lo originó ${e.target.className}`)
+}
+
+//Asignar un evento a cada div
+$divsEventos.forEach((div) => {
+    div.addEventListener("click", flujoEventos, false) //Fase de burbuja, del mas interno al mas externo
+    //div.addEventListener("click", flujoEventos, true) //Fase de captura, del elemento más externo al más interno. (Poco uso)
+})
