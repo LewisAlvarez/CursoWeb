@@ -367,6 +367,7 @@ posiciones:
     afterend  (hermano siguiente)
 */
 
+/*
 const $cards = document.querySelector(".cards")
 const $newCard = document.createElement("figure")
 
@@ -376,6 +377,8 @@ let contentCard = `
 `;
 
 $newCard.classList.add("card")
+
+*/
 
 //Insertando con los nuevos metodos
 
@@ -391,9 +394,34 @@ $cards.insertAdjacentElement("beforeend", $newCard)
 
 //$cards.insertAdjacentHTML("beforebegin", contentCard)
 //USANDO LOS 3 METODOS
+/*
 $newCard.insertAdjacentHTML("afterbegin", contentCard)
 $newCard.querySelector("figcaption").insertAdjacentText("afterbegin","Esto es texto ANY")
 $cards.insertAdjacentElement("afterbegin", $newCard)
 
+*/
 
+// --------------------------- MANEJADORES DE EVENTOS ------------------------------ //
+function holaMundo(){
+    alert("Hola accediste a un evento mediante un boton");
+    console.log(event);
+}
 
+//Como manejador semantico
+//Se cuarda en una varibale la representación del objeto button
+const $eventoSemantico = document.getElementById("evento-semantico")
+//En ese objeto se accede al evento onclick (en este caso) y lo igualamos a la función que queremos que ejecute al presionar el botón
+//Este manejador semantico, solo puede manejar 1 evento
+$eventoSemantico.onclick = holaMundo  //La función a la que iguales debe ir sin parentesis
+$eventoSemantico.onclick = () =>{ alert("Hola mundo, manejador de eventos semantico")}
+
+//Evento con MANEJADOR MULTIPLE
+//Permite ejecutar varias funciones que se hayan definido en diferentes manejadores al mismo evento
+const $eventoMultiple = document.getElementById("evento-multiple")
+$eventoMultiple.addEventListener("click", holaMundo)  //(NombreDelEvento, funcionAEjecutar ) --> Puede tener mas parametros
+$eventoMultiple.addEventListener("click", (e) => {
+    alert("Esto es un manejador de eventos múltiples")
+    console.log(e)
+    console.log(e.type)
+    console.log(e.target)
+})
