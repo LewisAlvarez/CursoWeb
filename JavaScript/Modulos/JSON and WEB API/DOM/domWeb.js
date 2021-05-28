@@ -407,6 +407,10 @@ function holaMundo(){
     console.log(event);
 }
 
+function saludar(nombre = "Desconocid@"){
+    alert(`Hola ${nombre}, que tal?`)
+}
+
 //Como manejador semantico
 //Se cuarda en una varibale la representación del objeto button
 const $eventoSemantico = document.getElementById("evento-semantico")
@@ -425,3 +429,18 @@ $eventoMultiple.addEventListener("click", (e) => {
     console.log(e.type)
     console.log(e.target)
 })
+
+//Eventos con Parámetos y Remover Eventos
+$eventoMultiple.addEventListener("click", () => {saludar("Car")})  //--> la función manejadora pasa a ser la arrowFunction y dentro de esta llamamos a la función deseada con parametros
+
+//Removiendo eventos con manejadores multiples
+const $eventoRemovedor = document.getElementById("evento-remover")
+
+const removerEvento = (e) => {
+    alert(`Removiendo el evento de tipo: ${e.type}`)
+    console.log(e)
+    $eventoRemovedor.removeEventListener("dblclick", removerEvento)
+    $eventoRemovedor.disabled = true //Desabilitamos el boton
+}
+
+$eventoRemovedor.addEventListener("dblclick", removerEvento)
