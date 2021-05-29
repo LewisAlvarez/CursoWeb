@@ -452,10 +452,11 @@ $eventoRemovedor.addEventListener("dblclick", removerEvento)
 //Propagación del evento, (Burbuja y Captura)
 
 const $divsEventos = document.querySelectorAll(".eventos-flujos div")
-console.log($divsEventos)
+//console.log($divsEventos)
 
 function flujoEventos(e) {
     console.log(`Hola te saluda: ${this.className}, el click lo originó ${e.target.className}`)
+    e.stopPropagation()
 }
 
 //Asignar un evento a cada div
@@ -463,3 +464,32 @@ $divsEventos.forEach((div) => {
     div.addEventListener("click", flujoEventos, false) //Fase de burbuja, del mas interno al mas externo
     //div.addEventListener("click", flujoEventos, true) //Fase de captura, del elemento más externo al más interno. (Poco uso)
 })
+
+
+//------------ Boton para girar imagen ------------- //
+const $girarImg = document.getElementById("girar")
+const $images = document.querySelector(".cards")
+
+function girarAleatoria(){
+    let rand = Math.round(Math.random() * 4)
+    $images.children[rand].classList.add("rotate-135")
+    console.log(`Se ha rotado la imagen: ${rand + 1}`)
+}
+
+//Voltear una imagen aleatoria
+$girarImg.addEventListener("click", girarAleatoria)
+
+//------------ Boton para girar imagen ------------- //
+
+//**************************************************************************** */
+
+//--------------------------------- DOM: stopPropagation & preventDefault ------------------------------- //
+const $linkEventos = document.querySelector(".eventos-flujos a") //clase y eqiqueta que deseo obtener
+console.log($linkEventos)
+
+$linkEventos.addEventListener("click",(e) => {
+    alert("Hola te saludo porque presionaste en el enlace")
+    e.stopPropagation()
+})
+
+
