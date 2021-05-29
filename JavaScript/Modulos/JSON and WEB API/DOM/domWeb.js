@@ -403,6 +403,7 @@ $cards.insertAdjacentElement("afterbegin", $newCard)
 
 // --------------------------- MANEJADORES DE EVENTOS ------------------------------ //
 
+/*
 function holaMundo(){
     alert("Hola accediste a un evento mediante un boton");
     console.log(event);
@@ -484,6 +485,8 @@ $girarImg.addEventListener("click", girarAleatoria)
 //**************************************************************************** */
 
 //--------------------------------- DOM: stopPropagation & preventDefault ------------------------------- //
+
+/*
 const $linkEventos = document.querySelector(".eventos-flujos a") //clase y eqiqueta que deseo obtener
 console.log($linkEventos)
 
@@ -492,4 +495,27 @@ $linkEventos.addEventListener("click",(e) => {
     e.stopPropagation()
 })
 
+*/
 
+//--------------------------------------- DOM: Delegación de Eventos ---------------------------//
+// 1 listener general aplicado al nodo raiz, agregandole todos los posibles eventos
+// ###### Se le asigna un listener al document y por medio de condicionales revisamos a cual elemento se le generó el evento y a ese especifico se le asigna la función que deseemos que realice. ######
+function flujoEventos(e) {
+    console.log(`Hola te saluda: el click lo originó ${e.target.className}`)
+    //e.stopPropagation()
+}
+
+//Asignamos el eventListener al document
+document.addEventListener("click", (e) => {
+    console.log("Click en" , e.target)
+
+    //Por medio de condicionales  //e.target --> me dice quien generó el click o evento
+    if (e.target.matches(".eventos-flujos a")){ //Busca coincidencias que haga match con "eventos-flujos a" --> el cual hace referencia al link
+        alert("Hola te saludo porque presionaste en el enlace")
+        e.preventDefault() //No abre la pagina
+    }
+
+    if (e.target.matches(".eventos-flujos div")){
+        flujoEventos(e)
+    }
+})
