@@ -500,6 +500,7 @@ $linkEventos.addEventListener("click",(e) => {
 //--------------------------------------- DOM: Delegación de Eventos ---------------------------//
 // 1 listener general aplicado al nodo raiz, agregandole todos los posibles eventos
 // ###### Se le asigna un listener al document y por medio de condicionales revisamos a cual elemento se le generó el evento y a ese especifico se le asigna la función que deseemos que realice. ######
+/*
 function flujoEventos(e) {
     console.log(`Hola te saluda: el click lo originó ${e.target.className}`)
     //e.stopPropagation()
@@ -518,4 +519,43 @@ document.addEventListener("click", (e) => {
     if (e.target.matches(".eventos-flujos div")){
         flujoEventos(e)
     }
+})
+
+*/
+
+//---------------------------------- BOM Propiedades y Eventos --------------------------------- //
+// ----------------------------------- BROWSER OBJECT MODEL ------------------------------- //
+
+window.addEventListener("resize", (e) => {  //--> Solo se ejecuta cuando se cmabia de tamaño la pantallo
+    console.clear()
+    console.log("************* Evento resize ***********")
+    console.log(window.innerWidth)
+    console.log(window.innerHeight)
+    console.log(window.outerHeight)
+    console.log(window.outerWidth)
+    console.log(e)
+})
+
+window.addEventListener("scroll", (e) => {
+    console.clear()
+    console.log("************* Evento scroll ***********")
+    console.log(window.scrollX)
+    console.log(window.scrollY)
+    console.log(e)
+})
+
+window.addEventListener("load", (e) => {
+    //console.clear()
+    console.log("************* Evento load ***********")
+    console.log(window.screenX)
+    console.log(window.screenY)
+    console.log(e)
+})
+
+window.addEventListener("DOMContentLoaded", (e) => {
+    //console.clear()
+    console.log("************* Evento DOMContentLoaded ***********")
+    console.log(window.screenX)
+    console.log(window.screenY)
+    console.log(e)
 })
