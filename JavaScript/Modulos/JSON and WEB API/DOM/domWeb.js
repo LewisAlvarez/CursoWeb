@@ -526,6 +526,7 @@ document.addEventListener("click", (e) => {
 //---------------------------------- BOM Propiedades y Eventos --------------------------------- //
 // ----------------------------------- BROWSER OBJECT MODEL ------------------------------- //
 
+/*
 window.addEventListener("resize", (e) => {  //--> Solo se ejecuta cuando se cmabia de tamaño la pantallo
     console.clear()
     console.log("************* Evento resize ***********")
@@ -558,4 +559,26 @@ window.addEventListener("DOMContentLoaded", (e) => {
     console.log(window.screenX)
     console.log(window.screenY)
     console.log(e)
+})
+*/
+
+//----------------------- BOM: Métodos ------------------------ //
+
+const $btnArbir = document.getElementById("abrir-ventana")
+const $btnCerrar = document.getElementById("cerrar-ventana")
+const $btnImprimir = document.getElementById("imprimir-ventana")
+
+let ventana;
+
+$btnArbir.addEventListener("click", e => {
+    console.log("*Abrir*")
+    ventana = window.open("https://www.youtube.com/") //Abre otra ventana con la dirección, y guardo en una referencia
+})
+$btnCerrar.addEventListener("click", e => {
+    console.log("*Cerrar*")
+    ventana.close() //Cerrar ventana
+})
+$btnImprimir.addEventListener("click", e => {
+    console.log("*Imprimir*")
+    window.print()
 })
