@@ -582,3 +582,47 @@ $btnImprimir.addEventListener("click", e => {
     console.log("*Imprimir*")
     window.print()
 })
+
+// -------------------------- BOM: Objetos: URL, Historial y Navegador----------------------------- //
+
+
+console.log("**************** Objeto URL (Location) *****************")
+//Métodos importantes de Objeto location
+console.log(window.location)
+console.log(location.origin) // Ruta de donde se origina la pagina + puerto
+console.log(location.protocol) // http/https
+console.log(location.host) // Direccion IP + Puerto
+console.log(location.hostname) // Dirección IP
+console.log(location.port) // Puerto de conexion
+console.log(location.href) // Ruta completa del archivo
+console.log(location.hash) // Ruta de donde se origina la pagina
+console.log(location.pathname) // Ruta de donde se origina la pagina sin IP ni puerto
+console.log(location.search) // Que dirección de más se busca en la ruta
+
+
+
+
+console.log("**************** History *****************")
+//Métodos importantes de Objeto History
+console.log(window.history)
+console.log(history.length)  //Cuantas página he visitado, cuantos "Hacia atrás o hacia adelante puedo dar" 
+//console.log(history.back(2)) // Ir tantas hacia a atrás
+//console.log(history.forward(3)) // Ir tantas paginas hacia adelante
+//console.log(history.go((-1))) // Si el parámetro es negativo va hacia atrás, si es positiva página hacía adelante
+
+
+console.log("**************** Navigator *****************")
+//Métodos importantes de Objeto Navigator
+console.log(window.navigator)
+console.log(navigator.connection)  //Información de conexión del cliente
+console.log(navigator.geolocation)  //Objeto para detirminar la localización del cliente
+console.log(navigator.mediaDevices)  //Dispositivos como camaras y microfonos
+console.log(navigator.mimeTypes)  //Tipos de formato que acepta el navegador
+console.log(navigator.onLine)  //Detección de eventos de conexión
+console.log(navigator.serviceWorker)  //API que ayuda volver un sitio web una aplicación instalable de escritorio desd google chrome
+console.log(navigator.storage)  //API de almacenamiento
+console.log(navigator.usb)  //COnexiones o no usb
+console.log(navigator.userAgent)  //Información de la maquina del cliente
+
+
+
