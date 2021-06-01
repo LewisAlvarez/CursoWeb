@@ -125,3 +125,8 @@ img {
     color: var(--second-color);
     background-color: var(--main-modal-color);
 }
+
+/************************************ Sección 1: Hora y Alamrma ***************************************/
+.hora {
+    visibility: hidden;
+}

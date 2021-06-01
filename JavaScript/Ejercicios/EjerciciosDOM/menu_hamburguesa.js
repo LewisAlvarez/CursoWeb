@@ -3,6 +3,7 @@
  * Exportar una función por defecto. Parametros: 
  * @param {*} panelBtn Botón del cual se va a ejecutar la acción: Btn hamburguesa
  * @param {*} panel // Panel al cual se le va a ejecutar la acción
+ * @param {*} menuLink Para hacer desaparecer el panel con las secciones al presional en uno de los enlaces
  */
 export default function hamburgerMenu(panelBtn, panel, menuLink){
     const d = document;
