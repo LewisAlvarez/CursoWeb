@@ -1,6 +1,15 @@
-
+/**
+ * Clase JS para Sección 1
+ */
 const d = document;
 let clockTiempo;
+
+/**
+ * Función para la funcionalidad de los botones (Iniciar, Detener)
+ * @param {*} reloj --> Div donde se maquetará la horá en tiemp real
+ * @param {*} btnIniciar  --> Botón que al precionar mostrará la hora actual
+ * @param {*} btnDetener  --> Botón que al presionar detendrá la hora y ocultará el Div (Reloj)
+ */
 
 export function relojDigital(reloj, btnIniciar, btnDetener){
     d.addEventListener("click", e => {
@@ -22,6 +31,13 @@ export function relojDigital(reloj, btnIniciar, btnDetener){
         }
     })
 }
+
+/**
+ * 
+ * @param {*} sonido 
+ * @param {*} btnIniciar 
+ * @param {*} btnDetener 
+ */
 
 export function alarma(sonido, btnIniciar, btnDetener){
     let alarmaTiempo;
