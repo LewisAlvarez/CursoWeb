@@ -4,7 +4,7 @@
 
 import  { alarma, relojDigital } from "./hora_alarma.js";
 import hamburgerMenu from "./menu_hamburguesa.js";
-import {shortcuts} from "./teclado.js"
+import {shortcuts, moveBall} from "./teclado.js"
 
 const d = document;
 
@@ -22,25 +22,6 @@ d.addEventListener("DOMContentLoaded", e => {
  */
 
 d.addEventListener("keydown", e => {
-    /*
     shortcuts(e);
-    shortcuts(e.key);
-    shortcuts(e.keyCode);
-    shortcuts(e.ctrlKey);
-    shortcuts(e.altKey);
-    shortcuts(e.shiftKey);
-    */
-
-    //Cuando el usuario presione las tecla alt + a, abre un alert
-    if (e.key === "a" && e.altKey){
-        alert("Haz lanzado una alerta con el teclado (Shortcuts)");
-    }
-
-    if (e.key === "c" && e.altKey) {
-        confirm("Esta es una confirmación lanzada desde el teclado")
-    }
-
-    if (e.key === "p" && e.altKey) {
-        prompt("Esto es un aviso lanzado desde el teclado")
-    }
+    moveBall(e, ".ball", ".stage"); //Evento, balon, escenario mirar html
 })

@@ -1,20 +1,20 @@
 /**
- * Clase JS para Sección 1
+ * Clase JS para Sección 1.
  */
 const d = document;
 let clockTiempo;
 
 /**
- * Función para la funcionalidad de los botones (Iniciar, Detener)
- * @param {*} reloj --> Div donde se maquetará la horá en tiemp real
- * @param {*} btnIniciar  --> Botón que al precionar mostrará la hora actual
- * @param {*} btnDetener  --> Botón que al presionar detendrá la hora y ocultará el Div (Reloj)
+ * Método donde se programa funcionalidad de los botones (Iniciar, Detener).
+ * @param {*} reloj --> Div donde se maquetará la horá en tiemp real.
+ * @param {*} btnIniciar  --> Botón que al precionar mostrará la hora actual.
+ * @param {*} btnDetener  --> Botón que al presionar detendrá la hora y ocultará el Div (Reloj).
  */
 
 export function relojDigital(reloj, btnIniciar, btnDetener){
     d.addEventListener("click", e => {
         if(e.target.matches(btnIniciar)){
-           clockTiempo = setInterval(() => {  //Intervalo para actualización
+           clockTiempo = setInterval(() => {  //Intervalo para actualización.
                 let clockHour = new Date().toLocaleTimeString();
                 d.querySelector(reloj).innerHTML = `<h3> ${clockHour} </h3>`;  //Se agrega html al div que contiene la información de la hora
             }, 1000) //Cada segungo se actualiza
@@ -33,10 +33,10 @@ export function relojDigital(reloj, btnIniciar, btnDetener){
 }
 
 /**
- * 
- * @param {*} sonido 
- * @param {*} btnIniciar 
- * @param {*} btnDetener 
+ * Método donde se programa funcionalidad de los botones (Iniciar, Detener) para la alarma.
+ * @param {*} sonido --> Ruta de donde se encuentra guardado el archivo .mp3 de la alarma.
+ * @param {*} btnIniciar --> Botón que activa la alarma.
+ * @param {*} btnDetener  --> Botón que desactiva la alarma.
  */
 
 export function alarma(sonido, btnIniciar, btnDetener){
