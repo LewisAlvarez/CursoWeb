@@ -4,14 +4,16 @@
 
 import  { alarma, relojDigital } from "./hora_alarma.js";
 import hamburgerMenu from "./menu_hamburguesa.js";
-import {shortcuts, moveBall} from "./teclado.js"
+import {shortcuts, moveBall} from "./teclado.js";
+import countdown from "./cuenta_regresiva.js";
 
 const d = document;
 
 d.addEventListener("DOMContentLoaded", e => {
     hamburgerMenu(".panel-btn", ".panel", ".menu a");
-    relojDigital("#reloj","#iniciar-reloj","#detener-reloj")  //# cuando es un id
-    alarma("assets/alarma.mp3", "#iniciar-alarma", "#detener-alarma")
+    relojDigital("#reloj","#iniciar-reloj","#detener-reloj");  //# cuando es un id
+    alarma("assets/alarma.mp3", "#iniciar-alarma", "#detener-alarma");
+    countdown("countdown", "Jun 02, 2022 02:27:19", "Feliz Cumpleaños :)" ); //nombre del id directo del selector
 })
 
 /**
