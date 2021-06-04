@@ -17,7 +17,6 @@ d.addEventListener("DOMContentLoaded", e => {
     alarma("assets/alarma.mp3", "#iniciar-alarma", "#detener-alarma");
     countdown("countdown", "Jun 02, 2022 02:27:19", "Feliz Cumpleaños :)" ); //nombre del id directo del selector
     scrollTopButton(".scroll-top-btn");
-    darkTheme(".dark-theme-btn","dark-mode"); //nombre de la clase (dark mode)
 })
 
 /**
@@ -33,3 +32,5 @@ d.addEventListener("keydown", e => {
 })
 
 
+
+darkTheme(".dark-theme-btn","dark-mode"); //nombre de la clase (dark mode)
