@@ -144,7 +144,7 @@ img {
     background-color: var(--main-color);
 }
 
-/* ScrollTopButton*/
+/********************* ScrollTopButton *********************/
 
 .scroll-top-btn {
     position: fixed;
@@ -163,7 +163,7 @@ img {
     transition: all 0.3s ease-out;
 }
 
-.scroll-top-btn:hover {
+.scroll-top-btn:hover { /*Hover, para cuando el usuario se pare sobre el botón*/
     background-color: var(--second-color);
     color: var(--main-color);
 }
@@ -171,4 +171,33 @@ img {
 .hidden {
     visibility: hidden;
     opacity: 0;
+}
+
+/********************* DarkThemeButton *********************/
+
+.dark-theme-btn {
+    position: fixed;
+    z-index: 999;
+    bottom: 1vh;
+    left: 1vw;
+    width: 4rem;height: 4rem;
+    border-radius: 50%;
+    font-size: 2rem;
+    font-weight: bold;
+    background-color: var(--main-color);
+    color: var(--second-color);
+    cursor: pointer;
+    outline: 0;
+    border: 0;
+    transition: all 0.3s ease-out;
+}
+
+.dark-theme-btn:hover { /*Hover, para cuando el usuario se pare sobre el botón*/
+    background-color: var(--second-color);
+    color: var(--main-color);
+}
+
+.dark-mode {
+    background-color:var(--second-color);
+    color: var(--main-color);
 }
